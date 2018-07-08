@@ -15,6 +15,7 @@ namespace Tecnicas
         public string contrasena { get; set; }
         public double indiceTrimestral { get; set; }
         public string gradoHonor { get; set; }
+        public int id { get; set; }
         public List<Materia> Materias { get; set; } = new List<Materia>();
     }
 }

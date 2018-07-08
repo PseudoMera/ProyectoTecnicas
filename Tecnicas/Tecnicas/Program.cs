@@ -85,6 +85,8 @@ namespace Tecnicas
                         break;
                     case "3":
                         break;
+                    default:
+                        break;
                 }
                 Console.Clear();
             } while (op != "3");
@@ -119,6 +121,8 @@ namespace Tecnicas
                         EliminarMateria();
                         break;
                     case "4":
+                        break;
+                    default:
                         break;
                 }
                 Console.Clear();
@@ -380,13 +384,112 @@ namespace Tecnicas
 
         public static void MenuEstudiante()
         {
-
+            string op = "";
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("1- Ver materias del estudiante");
+                Console.WriteLine("2- Borrar estudiante");
+                Console.WriteLine("3- Salir");
+                op = Console.ReadLine();
+                switch (op)
+                {
+                    case "1":
+                        Console.Clear();
+                        MateriasEstudiantes();
+                        break;
+                    case "2":
+                        Console.Clear();
+                        EliminarEstudiante();
+                        break;
+                    case "3":
+                        break;
+                    default:
+                        break;
+                }
+                Console.Clear();
+            } while (op != "3");
+            return;
         }
 
-        public static void MostrarEstudiantes()
+        public static void MostrarEstudiantes(List<Estudiante> estudiantes, int inicio)
         {
-
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Cantidad de estudiante registrados: {0}", estudiantes.Count());
+            Console.WriteLine("\n");
+            Console.SetCursorPosition(0, inicio);
+            Console.Write("Nombre");
+            Console.SetCursorPosition(20, inicio);
+            Console.Write("Apellido");
+            Console.SetCursorPosition(40, inicio);
+            Console.Write("ID");
+            Console.SetCursorPosition(55, inicio);
+            Console.Write("Indice Trimestral");
+            Console.SetCursorPosition(70, inicio);
+            Console.Write("Grado de Honor");
+            Console.SetCursorPosition(85, inicio);
+            Console.Write("Cantidad de materias");
+            foreach (Estudiante e in estudiantes)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.SetCursorPosition(0, inicio + 1);
+                Console.Write(e.nombre);
+                Console.SetCursorPosition(20, inicio + 1);
+                Console.Write(e.apellido);
+                Console.SetCursorPosition(40, inicio + 1);
+                Console.Write(e.id);
+                Console.SetCursorPosition(55, inicio + 1);
+                Console.Write(e.indiceTrimestral);
+                Console.SetCursorPosition(70, inicio + 1);
+                Console.Write(e.gradoHonor);
+                Console.SetCursorPosition(85, inicio + 1);
+                Console.Write(e.Materias.Count);
+                inicio++;
+            }
+            Console.WriteLine("\n");
+            return;
         }
+
+        public static void EliminarEstudiante()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            string res = "";
+            do
+            {
+                Console.Clear();
+                MostrarEstudiantes(listaEstudiante, 1);
+                Console.WriteLine("Introduzca el ID del estudiante que desea borrar");
+                res = Console.ReadLine();
+            } while (res == "");
+            int id = Convert.ToInt32(res);
+            Console.Clear();
+            Estudiante estudiante = listaEstudiante.FirstOrDefault(e => e.id == id);
+            List<Estudiante> lista = new List<Estudiante>();
+            lista.Add(estudiante);
+            if (estudiante != null)
+            {
+                MostrarEstudiantes(lista, 1);
+                string respuesta = "";
+                Console.WriteLine("Esta seguro que desea borrar el siguiente estudiante (si/no): ");
+                respuesta = Console.ReadLine();
+                respuesta = respuesta.ToLower();
+                if (respuesta.Contains("si"))
+                {
+                    listaEstudiante.Remove(estudiante);
+                    Console.WriteLine("El estudiante ha sido borrado satisfactoriamente.");
+                }
+                else
+                {
+                    Console.WriteLine("La operacion ha sido cancelada.");
+                }                         
+            }
+            else
+                Console.WriteLine("El estudiante no existe.");
+            Console.ReadKey();
+            return;
+        }
+
         public static bool ValidarNumeros(string valor)
         {
             foreach (char c in valor)
