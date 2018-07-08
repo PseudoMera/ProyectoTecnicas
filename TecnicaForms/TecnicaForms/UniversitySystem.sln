@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem", "login\UniversitySystem.csproj", "{A8740635-9BBA-471B-8707-3CA8FAB16711}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem", "UniversitySystem.csproj", "{A8740635-9BBA-471B-8707-3CA8FAB16711}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {65DA0368-D8B3-473B-AF40-B64E273ED66C}
+		SolutionGuid = {D2EDAC8D-E479-4688-98F7-E9E6A58F78BF}
 	EndGlobalSection
 EndGlobal
