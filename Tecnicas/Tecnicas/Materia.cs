@@ -17,7 +17,10 @@ namespace Tecnicas
         public string letra { get; set; }
         public List<Estudiante> estudiantes { get; set; } = new List<Estudiante>();
         public bool materiaSeleccionada { get; set; }
-        public double calificacion { get; set; }
+
+        
+        public double calificacion { get; set; } //representa la cantidad de puntos que vale cada materia en base a 4
+        public double puntos { get; set; } //representa los puntos una vez multiplicado calificacion * creditos
 
     }
 }

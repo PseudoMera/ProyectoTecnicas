@@ -17,5 +17,7 @@ namespace Tecnicas
         public string gradoHonor { get; set; }
         public int id { get; set; }
         public List<Materia> Materias { get; set; } = new List<Materia>();
+        public double totalCreditos { get; set; } //el total de creditos (se necesita calificar primero)
+        public double totalPuntos { get; set; } //el total de puntos (se necesita calificar primero)
     }
 }
