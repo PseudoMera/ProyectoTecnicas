@@ -1,0 +1,7 @@
+C:\Users\jheis\Source\Repos\Tecnicas\Tecnicas\bin\Debug\Tecnicas.exe.config
+C:\Users\jheis\Source\Repos\Tecnicas\Tecnicas\bin\Debug\Tecnicas.exe
+C:\Users\jheis\Source\Repos\Tecnicas\Tecnicas\bin\Debug\Tecnicas.pdb
+C:\Users\jheis\Source\Repos\Tecnicas\Tecnicas\obj\Debug\Tecnicas.csprojResolveAssemblyReference.cache
+C:\Users\jheis\Source\Repos\Tecnicas\Tecnicas\obj\Debug\Tecnicas.csproj.CoreCompileInputs.cache
+C:\Users\jheis\Source\Repos\Tecnicas\Tecnicas\obj\Debug\Tecnicas.exe
+C:\Users\jheis\Source\Repos\Tecnicas\Tecnicas\obj\Debug\Tecnicas.pdb
