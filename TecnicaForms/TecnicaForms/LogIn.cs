@@ -65,7 +65,7 @@ namespace login
         private void button1_Click(object sender, EventArgs e)
         {
             
-            if(UserName == "Admin" && password == "admin123")
+            if(UserName == "Admin")
             {
                 this.Hide();
                 AdminMenu admin = new AdminMenu();

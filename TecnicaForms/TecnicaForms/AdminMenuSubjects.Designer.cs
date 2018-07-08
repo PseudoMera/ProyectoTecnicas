@@ -29,17 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenuSubjects));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -48,143 +37,18 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.dgvMaterias = new System.Windows.Forms.DataGridView();
+            this.dgvMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCreditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProfesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCEstudiantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterias)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.9833F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.0167F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.listBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.listBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.listBox3, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.listBox4, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.listBox5, 4, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 93);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.99735F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.00266F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1004, 394);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Codigo";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(333, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 33);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Creditos";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(492, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 33);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Profesor";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(703, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(298, 27);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Cantidad de estudiantes";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Materia";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(3, 54);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(169, 324);
-            this.listBox1.TabIndex = 5;
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(178, 54);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(149, 324);
-            this.listBox2.TabIndex = 6;
-            // 
-            // listBox3
-            // 
-            this.listBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(333, 54);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(153, 324);
-            this.listBox3.TabIndex = 7;
-            // 
-            // listBox4
-            // 
-            this.listBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(492, 54);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(205, 324);
-            this.listBox4.TabIndex = 8;
-            // 
-            // listBox5
-            // 
-            this.listBox5.BackColor = System.Drawing.SystemColors.Info;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(703, 54);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(283, 324);
-            this.listBox5.TabIndex = 9;
             // 
             // button1
             // 
@@ -280,12 +144,62 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dgvMaterias
+            // 
+            this.dgvMaterias.AllowUserToResizeColumns = false;
+            this.dgvMaterias.AllowUserToResizeRows = false;
+            this.dgvMaterias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMaterias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvMaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaterias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMateria,
+            this.dgvCodigo,
+            this.dgvCreditos,
+            this.dgvProfesor,
+            this.dgvCEstudiantes});
+            this.dgvMaterias.Location = new System.Drawing.Point(74, 86);
+            this.dgvMaterias.Name = "dgvMaterias";
+            this.dgvMaterias.RowTemplate.Height = 24;
+            this.dgvMaterias.Size = new System.Drawing.Size(563, 334);
+            this.dgvMaterias.TabIndex = 8;
+            // 
+            // dgvMateria
+            // 
+            this.dgvMateria.HeaderText = "Materia";
+            this.dgvMateria.Name = "dgvMateria";
+            this.dgvMateria.Width = 84;
+            // 
+            // dgvCodigo
+            // 
+            this.dgvCodigo.HeaderText = "Codigo";
+            this.dgvCodigo.Name = "dgvCodigo";
+            this.dgvCodigo.Width = 81;
+            // 
+            // dgvCreditos
+            // 
+            this.dgvCreditos.HeaderText = "Creditos";
+            this.dgvCreditos.Name = "dgvCreditos";
+            this.dgvCreditos.Width = 89;
+            // 
+            // dgvProfesor
+            // 
+            this.dgvProfesor.HeaderText = "Profesor";
+            this.dgvProfesor.Name = "dgvProfesor";
+            this.dgvProfesor.Width = 91;
+            // 
+            // dgvCEstudiantes
+            // 
+            this.dgvCEstudiantes.HeaderText = "Cantidad de Estudiantes";
+            this.dgvCEstudiantes.Name = "dgvCEstudiantes";
+            this.dgvCEstudiantes.Width = 174;
+            // 
             // AdminMenuSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1062, 604);
+            this.Controls.Add(this.dgvMaterias);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -293,38 +207,25 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMenuSubjects";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMenuSubjects";
+            this.Load += new System.EventHandler(this.AdminMenuSubjects_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminMenuSubjects_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminMenuSubjects_MouseMove);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -333,5 +234,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dgvMaterias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMateria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCreditos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProfesor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCEstudiantes;
     }
 }

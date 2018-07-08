@@ -12,6 +12,11 @@ namespace login
 {
     public partial class Register : Form
     {
+        List<Estudiante> estudiantes;
+        Datos data = new Datos();
+        List<Materia> materiasAGuardar;
+        private static Estudiante estu;
+
         public Register()
         {
             InitializeComponent();
@@ -32,11 +37,21 @@ namespace login
 
         private void Register_Load(object sender, EventArgs e)
         {
-
+            if (data.obtenerEstudiantes() != null)
+            {
+                estudiantes = data.obtenerEstudiantes();
+            }
+            else
+            {
+                estudiantes = new List<Estudiante>();
+            }
         }
 
         //Allows the register screen to be moved around
         Point lastPoint;
+
+        internal static Estudiante Estu { get => estu; set => estu = value; }
+
         private void Register_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -71,11 +86,21 @@ namespace login
         {
             SubjectsList subjectlist = new SubjectsList();
             subjectlist.Show();
+            materiasAGuardar = new List<Materia>();
+            materiasAGuardar = login.SubjectsList.MateriasSeleccionadas;
         }
 
         //Register button
         private void button2_Click(object sender, EventArgs e)
         {
+            estu = new Estudiante();
+            estu.usuario = tbUsername.Text;
+            estu.nombre = tbNombre.Text;
+            estu.apellido = tbApellido.Text;
+            estu.carrera = tbCarrera.Text;
+            estu.contrasena = tbContrasena.Text;
+            estu.Materias = materiasAGuardar;
+            data.guardarEstudiantes(estu);
             MessageBox.Show("Felicidades! Te has registrado con exito");
             this.Close();
             LogIn log = new LogIn();
@@ -95,7 +120,7 @@ namespace login
         //Password Textbox
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            textBox5.PasswordChar = '*';
+            tbContrasena.PasswordChar = '*';
         }
         //Nombre textbox
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -109,6 +134,11 @@ namespace login
         }
         //Carrera textbox
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

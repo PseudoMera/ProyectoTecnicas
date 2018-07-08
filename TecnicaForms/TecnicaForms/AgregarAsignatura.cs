@@ -12,6 +12,8 @@ namespace login
 {
     public partial class AgregarAsignatura : Form
     {
+        Datos data = new Datos();
+        Materia mat;
         public AgregarAsignatura()
         {
             InitializeComponent();
@@ -42,17 +44,23 @@ namespace login
         string nombre, codigo, profesor, creditos;
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            mat = new Materia();
+            mat.materiaCodigo = tbCodigo.Text;
+            mat.materiaCreditos = Convert.ToInt32(tbCreditos.Text);
+            mat.materiaProfesor = tbProfesor.Text;
+            mat.materiaNombre = tbNombre.Text;
+
+            data.guardarMaterias(mat);
             DialogResult dialog = MessageBox.Show("Quieres guardar esta informacion?", "save", MessageBoxButtons.YesNo);
 
             if(dialog == DialogResult.Yes)
             {
                 //Tu sabras lo que vas a hacer con esta data o si no me avisas porque desde 
                 //mi perspectiva este tipo de cosas le tocaba a ustedes
-                nombre = textBox1.Text;
-                codigo = textBox3.Text;
-                profesor = textBox5.Text;
-                creditos = textBox4.Text;
+                nombre = tbNombre.Text;
+                codigo = tbCodigo.Text;
+                profesor = tbProfesor.Text;
+                creditos = tbCreditos.Text;
             }
 
             this.Close();
