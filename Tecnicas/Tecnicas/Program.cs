@@ -15,19 +15,22 @@ namespace Tecnicas
         {
             MenuAdmin();
         }
-        
+
         public static void RegistrarEstudiante()
         {
+            Console.Clear();
             Estudiante estudiante = new Estudiante();
+            estudiante.id = listaEstudiante.Count() + 1;
             Console.WriteLine("Introduzca el usuario del estudiante: ");
             estudiante.usuario = Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Introduzca la contraseña: ");
-            estudiante.contrasena = Console.ReadLine();
+            estudiante.contrasena = Console.ReadLine();           
             bool nombre = true;
             string nombreEstudiante = "";
             do
             {
+                Console.Clear();
                 Console.WriteLine("Nombre del estudiante: ");
                 nombreEstudiante = Console.ReadLine();
                 nombre = ValidarTexto(nombreEstudiante);
@@ -37,41 +40,77 @@ namespace Tecnicas
             string apellidoEstudiante = "";
             do
             {
-                Console.WriteLine("Nombre del estudiante: ");
+                Console.Clear();
+                Console.WriteLine("Apellido del estudiante: ");
                 apellidoEstudiante = Console.ReadLine();
                 apellido = ValidarTexto(apellidoEstudiante);
             } while (apellido);
             estudiante.apellido = apellidoEstudiante;
             Console.Clear();
             Console.WriteLine("Introduzca la carrera del estudiante: ");
-            estudiante.carrera = Console.ReadLine();            
+            estudiante.carrera = Console.ReadLine();
             string op = "";
             int valor = -1;
+            List<Materia> materiasActuales = new List<Materia>();
+            materiasActuales = estudiante.Materias;
             do
             {
                 Console.Clear();
                 MostrarMaterias(listaMateria, 1);
                 Console.WriteLine("Selecciona sus materias con el ID o escriba 0 para salir al menu principal: ");
-                bool prueba = true;            
+                bool prueba = true;
                 do
                 {
                     op = Console.ReadLine();
                     prueba = ValidarNumeros(op);
-                }while (prueba);
-                valor = Int32.Parse(op);                                            
+                } while (prueba);
+                valor = Int32.Parse(op);
+                bool aqui = false;
+                Materia proof = listaMateria.Where(x => x.materiaId == valor).FirstOrDefault();
+                if (proof != null)
+                {
+                    Materia materiaTomada = materiasActuales.Where(y => y.materiaId == valor).FirstOrDefault();
+                    if (materiaTomada != null)
+                    {
+                        Console.WriteLine("Ya tiene esta materia seleccionada, seleccione otra.");
+                        aqui = true;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("La materia no existe.");
+                    aqui = true;
+                }
+                if (!aqui)
+                {
+                    estudiante.Materias.Add(proof);
+                    foreach (Materia mate in listaMateria)
+                    {
+                        if (mate == proof)
+                        {
+                            mate.estudiantes.Add(estudiante);
+                            break;
+                        }
+                    }
+                    Console.WriteLine("La materia ha sido seleccionada satisfactoriamente.");
+                }
+                Console.ReadKey();
+                aqui = false;
             } while (valor != 0);
-           
+            listaEstudiante.Add(estudiante);
         }
 
         public static void MenuAdmin()
-        {         
+        {
             string op = "";
             do
             {
                 Console.WriteLine("Seleccione la opcion que desea utilizar: ");
                 Console.WriteLine("1- Materia");
                 Console.WriteLine("2- Estudiante");
-                Console.WriteLine("3- Salir");
+                Console.WriteLine("3- Registrar");
+                Console.WriteLine("4- Listar estudiantes");
+                Console.WriteLine("5- Salir");
                 op = Console.ReadLine();
                 switch (op)
                 {
@@ -84,18 +123,21 @@ namespace Tecnicas
                         MenuEstudiante();
                         break;
                     case "3":
+                        RegistrarEstudiante();
+                        break;
+                    case "4":
+                        MostrarEstudiantes(listaEstudiante, 1);
                         break;
                     default:
                         break;
                 }
                 Console.Clear();
-            } while (op != "3");
+            } while (op != "5");
             return;
         }
 
         public static void MenuMateria()
         {
-            
             string op = "";
             do
             {
@@ -105,7 +147,7 @@ namespace Tecnicas
                 Console.WriteLine("2- Editar materia");
                 Console.WriteLine("3- Eliminar materia");
                 Console.WriteLine("4- Salir");
-                op = Console.ReadLine(); 
+                op = Console.ReadLine();
                 switch (op)
                 {
                     case "1":
@@ -229,7 +271,7 @@ namespace Tecnicas
         }
 
         public static void EditarMateria()
-        {          
+        {
             bool prueba;
             string valor = "";
             do
@@ -296,7 +338,7 @@ namespace Tecnicas
                         Console.Clear();
                         e.materiaCodigo = valor2;
 
-                    }              
+                    }
                     else if (res.Contains("PROFESOR"))
                     {
                         bool profesor = true;
@@ -334,18 +376,20 @@ namespace Tecnicas
             Console.Clear();
             return;
         }
-        
+
         public static void EliminarMateria()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             string res = "";
+            bool esNumero = true;
             do
             {
                 Console.Clear();
                 MostrarMaterias(listaMateria, 1);
                 Console.WriteLine("Introduzca el ID de la materia que desea borrar");
                 res = Console.ReadLine();
-            } while (res == "");
+                esNumero = ValidarNumeros(res);
+            } while (esNumero);
             int id = Convert.ToInt32(res);
             Console.Clear();
             Materia materia = listaMateria.FirstOrDefault(e => e.materiaId == id);
@@ -388,7 +432,7 @@ namespace Tecnicas
             do
             {
                 Console.Clear();
-                Console.WriteLine("1- Ver materias del estudiante");
+                Console.WriteLine("1- Ver materias estudiante.");
                 Console.WriteLine("2- Borrar estudiante");
                 Console.WriteLine("3- Salir");
                 op = Console.ReadLine();
@@ -396,7 +440,7 @@ namespace Tecnicas
                 {
                     case "1":
                         Console.Clear();
-                        MateriasEstudiantes();
+                        MateriaEstudiante();
                         break;
                     case "2":
                         Console.Clear();
@@ -426,9 +470,9 @@ namespace Tecnicas
             Console.Write("ID");
             Console.SetCursorPosition(55, inicio);
             Console.Write("Indice Trimestral");
-            Console.SetCursorPosition(70, inicio);
+            Console.SetCursorPosition(75, inicio);
             Console.Write("Grado de Honor");
-            Console.SetCursorPosition(85, inicio);
+            Console.SetCursorPosition(90, inicio);
             Console.Write("Cantidad de materias");
             foreach (Estudiante e in estudiantes)
             {
@@ -441,9 +485,9 @@ namespace Tecnicas
                 Console.Write(e.id);
                 Console.SetCursorPosition(55, inicio + 1);
                 Console.Write(e.indiceTrimestral);
-                Console.SetCursorPosition(70, inicio + 1);
+                Console.SetCursorPosition(75, inicio + 1);
                 Console.Write(e.gradoHonor);
-                Console.SetCursorPosition(85, inicio + 1);
+                Console.SetCursorPosition(90, inicio + 1);
                 Console.Write(e.Materias.Count);
                 inicio++;
             }
@@ -455,13 +499,15 @@ namespace Tecnicas
         {
             Console.ForegroundColor = ConsoleColor.Green;
             string res = "";
+            bool esNumero = true;
             do
             {
                 Console.Clear();
                 MostrarEstudiantes(listaEstudiante, 1);
                 Console.WriteLine("Introduzca el ID del estudiante que desea borrar");
                 res = Console.ReadLine();
-            } while (res == "");
+                esNumero = ValidarNumeros(res);
+            } while (esNumero);
             int id = Convert.ToInt32(res);
             Console.Clear();
             Estudiante estudiante = listaEstudiante.FirstOrDefault(e => e.id == id);
@@ -482,12 +528,209 @@ namespace Tecnicas
                 else
                 {
                     Console.WriteLine("La operacion ha sido cancelada.");
-                }                         
+                }
             }
             else
                 Console.WriteLine("El estudiante no existe.");
             Console.ReadKey();
             return;
+        }
+
+        public static void MateriaEstudiante()
+        {
+            MostrarEstudiantes(listaEstudiante, 1);
+            string res = "";
+            bool esNumero = true;
+            do
+            {
+                Console.Clear();
+                MostrarEstudiantes(listaEstudiante, 1);
+                Console.WriteLine("Introduzca el ID del estudiante al cual desea acceder");
+                res = Console.ReadLine();
+                esNumero = ValidarNumeros(res);
+            } while (esNumero);
+            int id = Convert.ToInt32(res);
+            Console.Clear();
+            Estudiante estudiante = listaEstudiante.FirstOrDefault(e => e.id == id);
+            List<Estudiante> lista = new List<Estudiante>();
+            lista.Add(estudiante);            
+            string op = "";
+            do
+            {
+                MostrarMaterias(estudiante.Materias, 1);
+                Console.WriteLine("Nombre del estudiante: {0}", estudiante.nombre);
+                Console.WriteLine("Que opcion desea realizar");
+                Console.WriteLine("1- Calificar Materia");
+                Console.WriteLine("2- Salir");
+                op = Console.ReadLine();
+                switch (op)
+                {
+                    case "1":
+                        CalificarMaterias(lista, estudiante);
+                        break;
+                    default:
+                        break;
+                }
+            } while (op != "2");
+            Console.ReadKey();
+            return;
+        }
+
+        public static void CalificarMaterias(List<Estudiante>lista, Estudiante estudiante)
+        {
+            int op = -1;
+            do
+            {
+                MostrarMateriasCalificar(estudiante.Materias, 1);
+                Console.WriteLine("Introduzca el ID de la materia que quiere calificar o 0 si desea salir: ");
+                string res = "";
+                bool esNumero = true;
+                do
+                {
+                    Console.Clear();
+                    res = Console.ReadLine();
+                    esNumero = ValidarNumeros(res);
+                } while (esNumero);
+                op = Convert.ToInt32(res);
+                PonerCalificacion(op,estudiante,lista);
+            } while (op != 0);
+        }
+
+        public static void MostrarMateriasCalificar(List<Materia> materias, int inicio)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Cantidad de materias registrados: {0}", materias.Count());
+            Console.WriteLine("\n");
+            Console.SetCursorPosition(0, inicio);
+            Console.Write("Nombre");
+            Console.SetCursorPosition(20, inicio);
+            Console.Write("Codigo");
+            Console.SetCursorPosition(35, inicio);
+            Console.Write("ID");
+            Console.SetCursorPosition(42, inicio);
+            Console.Write("Creditos");
+            Console.SetCursorPosition(60, inicio);
+            Console.Write("Puntos");
+            foreach (Materia e in materias)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.SetCursorPosition(0, inicio + 1);
+                Console.Write(e.materiaNombre);
+                Console.SetCursorPosition(20, inicio + 1);
+                Console.Write(e.materiaCodigo);
+                Console.SetCursorPosition(35, inicio + 1);
+                Console.Write(e.materiaId);
+                Console.SetCursorPosition(42, inicio + 1);
+                Console.Write(e.materiaCreditos);
+                Console.SetCursorPosition(60, inicio + 1);
+                Console.Write(e.materiaNota);
+                inicio++;
+            }
+            Console.WriteLine("\n");
+            return;
+        }
+
+        public static void PonerCalificacion(int op, Estudiante estudiante, List<Estudiante> lista)
+        {
+            List<Materia> materias = new List<Materia>();
+            var m = listaMateria.FirstOrDefault(e => e.materiaId == op);
+            materias.Add(m);
+            if (m != null)
+            {
+                int nota = -1;
+                do
+                {
+                    string res = "";
+                    bool esNumero = true;
+                    do
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Introduzca una nota del 0 al 100 para esta materia: ");
+                        res = Console.ReadLine();
+                        esNumero = ValidarNumeros(res);
+                    } while (esNumero);
+                    nota = Convert.ToInt32(res);
+                } while (nota < 0 || nota > 100);
+                m.materiaNota = nota;
+                m.letra = LetraNota(nota);
+                m.calificacion = LetraCalificacion(nota);
+                estudiante.Materias.Add(m);
+                lista.Add(estudiante);
+            }
+            else
+            {
+                Console.WriteLine("La materia no existe. ");
+            }
+            return;
+        }
+
+        public static string LetraNota(int nota)
+        {
+            string letra = "";
+            if (nota >= 90 && nota <= 100)
+            {
+                letra = "A";
+            }
+            else if (nota >= 85 && nota < 90)
+            {
+                letra = "B+";
+            }
+            else if (nota >= 80 && nota < 85)
+            {
+                letra = "B";
+            }
+            else if (nota >= 75 && nota < 80)
+            {
+                letra = "C+";
+            }
+            else if (nota >= 70 && nota < 75)
+            {
+                letra = "C";
+            }
+            else if (nota >= 60 && nota < 70)
+            {
+                letra = "D";
+            }
+            else
+            {
+                letra = "F";
+            }
+            return letra;
+        }
+
+        public static double LetraCalificacion(int nota)
+        {
+            double calificacion = 0;
+            if (nota >= 90 && nota <= 100)
+            {
+                calificacion = 4.0;
+            }
+            else if (nota >= 85 && nota < 90)
+            {
+                calificacion = 3.5;
+            }
+            else if (nota >= 80 && nota < 85)
+            {
+                calificacion = 3.0;
+            }
+            else if (nota >= 75 && nota < 80)
+            {
+                calificacion = 2.5;
+            }
+            else if (nota >= 70 && nota < 75)
+            {
+                calificacion = 2.0;
+            }
+            else if (nota >= 60 && nota < 70)
+            {
+                calificacion = 1.0;
+            }
+            else
+            {
+                calificacion = 0.0;
+            }
+            return calificacion;
         }
 
         public static bool ValidarNumeros(string valor)
