@@ -80,6 +80,8 @@ namespace Tecnicas
                         MenuMateria();
                         break;
                     case "2":
+                        Console.Clear();
+                        MenuEstudiante();
                         break;
                     case "3":
                         break;
@@ -293,10 +295,16 @@ namespace Tecnicas
                     }              
                     else if (res.Contains("PROFESOR"))
                     {
-                        Console.Clear();
-                        Console.WriteLine("Introduzca el profesor de la materia: ");
-                        valor2 = Console.ReadLine();
-                        e.materiaProfesor = valor2;
+                        bool profesor = true;
+                        string nombreProfesor = "";
+                        do
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Escriba el profesor de la materia: ");
+                            nombreProfesor = Console.ReadLine();
+                            profesor = ValidarTexto(nombreProfesor);
+                        } while (profesor);
+                        e.materiaProfesor = nombreProfesor;
                     }
                     else if (res.Contains("CREDITOS"))
                     {
@@ -370,6 +378,15 @@ namespace Tecnicas
             return;
         }
 
+        public static void MenuEstudiante()
+        {
+
+        }
+
+        public static void MostrarEstudiantes()
+        {
+
+        }
         public static bool ValidarNumeros(string valor)
         {
             foreach (char c in valor)
@@ -386,10 +403,14 @@ namespace Tecnicas
         {
             foreach (char c in texto)
             {
-                if (!Char.IsLetter(c))
+                if (!Char.IsLetter(c) && c != ' ')
                 {
                     return true;
                 }
+            }
+            if (string.IsNullOrWhiteSpace(texto))
+            {
+                return true;
             }
             return false;
         }
