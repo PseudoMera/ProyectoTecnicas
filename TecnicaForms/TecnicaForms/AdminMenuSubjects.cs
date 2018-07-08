@@ -12,6 +12,9 @@ namespace login
 {
     public partial class AdminMenuSubjects : Form
     {
+        Datos data = new Datos();
+        List<Materia> materias = new List<Materia>();
+
         public AdminMenuSubjects()
         {
             InitializeComponent();
@@ -28,13 +31,7 @@ namespace login
         //Editar button
         private void button2_Click(object sender, EventArgs e)
         {
-            int indx = listBox1.SelectedIndex;
-            //Put the code to edit it here
-            if(listBox1.SelectedIndex >= 0)
-            {
-                //I will leave this little hint here
-                //listBox1.Items.;
-            }
+           
         }
         //Salir button
         private void button3_Click(object sender, EventArgs e)
@@ -85,6 +82,33 @@ namespace login
         {
             lastPoint = new Point(e.X, e.Y);
 
+        }
+        
+        private void AdminMenuSubjects_Load(object sender, EventArgs e)
+        {
+            materias = data.obtenerMaterias();
+            int counter = 0;
+            string val = materias.Count.ToString();
+            foreach(Materia mat in materias)
+            {
+                DataGridViewRow nuevaFila = new DataGridViewRow();
+                DataGridViewCell nuevaCelda = new DataGridViewTextBoxCell();
+                nuevaCelda.Value = mat.materiaNombre;
+                nuevaFila.Cells.Add(nuevaCelda);
+                nuevaCelda = new DataGridViewTextBoxCell();
+                nuevaCelda.Value = mat.materiaCodigo;
+                nuevaFila.Cells.Add(nuevaCelda);
+                nuevaCelda = new DataGridViewTextBoxCell();
+                nuevaCelda.Value = mat.materiaCreditos.ToString();
+                nuevaFila.Cells.Add(nuevaCelda);
+                nuevaCelda = new DataGridViewTextBoxCell();
+                nuevaCelda.Value = mat.materiaProfesor;
+                nuevaFila.Cells.Add(nuevaCelda);
+                nuevaCelda = new DataGridViewTextBoxCell();
+                nuevaCelda.Value = mat.estudiantes.Count.ToString();
+                nuevaFila.Cells.Add(nuevaCelda);
+                dgvMaterias.Rows.Add(nuevaFila);
+            }
         }
     }
 }

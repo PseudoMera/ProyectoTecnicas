@@ -35,10 +35,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.tbCodigo = new System.Windows.Forms.TextBox();
+            this.tbCreditos = new System.Windows.Forms.TextBox();
+            this.tbProfesor = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,33 +111,33 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // tbNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 22);
-            this.textBox1.TabIndex = 6;
+            this.tbNombre.Location = new System.Drawing.Point(116, 53);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(208, 22);
+            this.tbNombre.TabIndex = 6;
             // 
-            // textBox3
+            // tbCodigo
             // 
-            this.textBox3.Location = new System.Drawing.Point(116, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 22);
-            this.textBox3.TabIndex = 8;
+            this.tbCodigo.Location = new System.Drawing.Point(116, 120);
+            this.tbCodigo.Name = "tbCodigo";
+            this.tbCodigo.Size = new System.Drawing.Size(208, 22);
+            this.tbCodigo.TabIndex = 8;
             // 
-            // textBox4
+            // tbCreditos
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 191);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(208, 22);
-            this.textBox4.TabIndex = 9;
+            this.tbCreditos.Location = new System.Drawing.Point(116, 191);
+            this.tbCreditos.Name = "tbCreditos";
+            this.tbCreditos.Size = new System.Drawing.Size(208, 22);
+            this.tbCreditos.TabIndex = 9;
             // 
-            // textBox5
+            // tbProfesor
             // 
-            this.textBox5.Location = new System.Drawing.Point(116, 276);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(208, 22);
-            this.textBox5.TabIndex = 10;
+            this.tbProfesor.Location = new System.Drawing.Point(116, 276);
+            this.tbProfesor.Name = "tbProfesor";
+            this.tbProfesor.Size = new System.Drawing.Size(208, 22);
+            this.tbProfesor.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -169,10 +169,10 @@
             this.ClientSize = new System.Drawing.Size(521, 353);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbProfesor);
+            this.Controls.Add(this.tbCreditos);
+            this.Controls.Add(this.tbCodigo);
+            this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -202,10 +202,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.TextBox tbCodigo;
+        private System.Windows.Forms.TextBox tbCreditos;
+        private System.Windows.Forms.TextBox tbProfesor;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
