@@ -51,11 +51,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(140, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 51);
+            this.label1.Size = new System.Drawing.Size(143, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign Up";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -140,7 +140,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -156,7 +156,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -233,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(411, 488);
             this.Controls.Add(this.tbContrasena);
             this.Controls.Add(this.label6);

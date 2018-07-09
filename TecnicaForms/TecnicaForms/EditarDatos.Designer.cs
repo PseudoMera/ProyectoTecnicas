@@ -66,7 +66,7 @@
             this.label1.Font = new System.Drawing.Font("Roboto Cn", 25.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(439, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 53);
+            this.label1.Size = new System.Drawing.Size(228, 52);
             this.label1.TabIndex = 45;
             this.label1.Text = "Editar Datos";
             // 
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(872, 483);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
