@@ -51,3 +51,5 @@ C:\Users\Francisco\source\TecnicaForms\TecnicaForms\obj\Debug\login.exe
 C:\Users\Francisco\source\TecnicaForms\TecnicaForms\obj\Debug\login.pdb
 C:\Users\Francisco\source\TecnicaForms\TecnicaForms\obj\Debug\login.EditarDatos.resources
 C:\Users\Francisco\source\TecnicaForms\TecnicaForms\obj\Debug\login.Perfil.resources
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.EditarDatos.resources
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.Perfil.resources

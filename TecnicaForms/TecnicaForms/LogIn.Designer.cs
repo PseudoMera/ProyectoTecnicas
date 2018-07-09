@@ -52,7 +52,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(194, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(191, 125);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -65,11 +65,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(127, 40);
+            this.label1.Location = new System.Drawing.Point(129, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 51);
+            this.label1.Size = new System.Drawing.Size(191, 72);
             this.label1.TabIndex = 1;
             this.label1.Text = "JACAV";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,7 +123,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkMagenta;
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkMagenta;
             this.button1.Location = new System.Drawing.Point(157, 386);
             this.button1.Name = "button1";
@@ -139,7 +139,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkMagenta;
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkMagenta;
             this.button2.Location = new System.Drawing.Point(157, 504);
             this.button2.Name = "button2";
@@ -153,11 +153,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Cn", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(43, 459);
+            this.label2.Location = new System.Drawing.Point(74, 460);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(351, 23);
+            this.label2.Size = new System.Drawing.Size(293, 24);
             this.label2.TabIndex = 9;
             this.label2.Text = "No tienes una cuenta? REGISTRATE!";
             // 
@@ -223,6 +223,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.LogIn_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LogIn_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LogIn_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

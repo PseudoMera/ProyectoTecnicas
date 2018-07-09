@@ -110,5 +110,15 @@ namespace login
                 dgvMaterias.Rows.Add(nuevaFila);
             }
         }
+
+        private void dgvMaterias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void AdminMenuSubjects_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }

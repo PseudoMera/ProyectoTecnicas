@@ -256,6 +256,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Register_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Register_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Register_MouseMove);
             this.panel1.ResumeLayout(false);

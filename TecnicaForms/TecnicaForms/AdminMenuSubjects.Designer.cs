@@ -55,7 +55,7 @@
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(134, 546);
+            this.button1.Location = new System.Drawing.Point(74, 546);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 46);
             this.button1.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(415, 546);
+            this.button2.Location = new System.Drawing.Point(334, 545);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 46);
             this.button2.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.button3.FlatAppearance.BorderSize = 3;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(702, 547);
+            this.button3.Location = new System.Drawing.Point(563, 549);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 45);
             this.button3.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(63, 547);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 545);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -104,7 +104,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(339, 546);
+            this.pictureBox2.Location = new System.Drawing.Point(292, 545);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -115,7 +115,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(624, 547);
+            this.pictureBox3.Location = new System.Drawing.Point(521, 549);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(45, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -137,7 +137,7 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1017, 0);
+            this.button4.Location = new System.Drawing.Point(716, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 36);
             this.button4.TabIndex = 8;
@@ -160,8 +160,9 @@
             this.dgvMaterias.Location = new System.Drawing.Point(74, 86);
             this.dgvMaterias.Name = "dgvMaterias";
             this.dgvMaterias.RowTemplate.Height = 24;
-            this.dgvMaterias.Size = new System.Drawing.Size(563, 334);
+            this.dgvMaterias.Size = new System.Drawing.Size(566, 396);
             this.dgvMaterias.TabIndex = 8;
+            this.dgvMaterias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaterias_CellContentClick);
             // 
             // dgvMateria
             // 
@@ -198,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1062, 604);
+            this.ClientSize = new System.Drawing.Size(757, 604);
             this.Controls.Add(this.dgvMaterias);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
@@ -213,6 +214,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMenuSubjects";
             this.Load += new System.EventHandler(this.AdminMenuSubjects_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminMenuSubjects_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminMenuSubjects_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminMenuSubjects_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

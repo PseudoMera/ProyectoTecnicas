@@ -34,37 +34,15 @@
     <Carrera>Software</Carrera>
     <Contrasena>1234</Contrasena>
     <ID>0</ID>
-    <Materias>
-      <Materia>
-        <ID>0</ID>
-        <Codigo>SOC-2039</Codigo>
-        <Nombre>Sociales</Nombre>
-        <Profesor>Miriam</Profesor>
-        <Creditos>0</Creditos>
-        <Nota>0</Nota>
-        <Calificacion>0</Calificacion>
-        <Letra />
-      </Materia>
-      <Materia>
-        <ID>0</ID>
-        <Codigo>NATU-204</Codigo>
-        <Nombre>Naturaleza</Nombre>
-        <Profesor>Jose</Profesor>
-        <Creditos>4</Creditos>
-        <Nota>0</Nota>
-        <Calificacion>0</Calificacion>
-        <Letra />
-      </Materia>
-      <Materia>
-        <ID>0</ID>
-        <Codigo>MAT-203</Codigo>
-        <Nombre>Matematica</Nombre>
-        <Profesor>Juancho</Profesor>
-        <Creditos>0</Creditos>
-        <Nota>0</Nota>
-        <Calificacion>0</Calificacion>
-        <Letra />
-      </Materia>
-    </Materias>
+    <Materias />
+  </Estudiante>
+  <Estudiante>
+    <Usuario></Usuario>
+    <Nombre></Nombre>
+    <Apellido></Apellido>
+    <Carrera></Carrera>
+    <Contrasena></Contrasena>
+    <ID>0</ID>
+    <Materias />
   </Estudiante>
 </Estudiantes>
