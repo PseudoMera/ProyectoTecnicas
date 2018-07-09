@@ -58,7 +58,8 @@ namespace login
                 });
                 
             }
-
+            //This throws an exception when we do the sign up without selecting a subject
+            //Implement the try catch for this 
             foreach(Materia mate in estudianteAGuardar.Materias)
             {
 

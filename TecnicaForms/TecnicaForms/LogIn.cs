@@ -64,13 +64,17 @@ namespace login
         //If it does, we continue to the admin menu
         private void button1_Click(object sender, EventArgs e)
         {
-            
             if(UserName == "Admin")
             {
                 this.Hide();
                 AdminMenu admin = new AdminMenu();
                 admin.Show();
                 
+            } else
+            {
+                Perfil perfil = new Perfil();
+                this.Hide();
+                perfil.Show();
             }
             //THIS WILL CLEAN THE PASSWORD AND USERNAME TEXTBOX IF IT IS INCORRECT
             //THIS SHOULD BE KEPT ON THE BOTTOM OF THE METHOD
@@ -127,6 +131,12 @@ namespace login
         {
             lastPoint = new Point(e.X, e.Y);
 
+        }
+
+        //Adds a very thin border to the form
+        private void LogIn_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

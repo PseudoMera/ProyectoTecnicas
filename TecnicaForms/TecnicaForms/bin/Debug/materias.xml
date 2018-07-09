@@ -49,7 +49,18 @@
     <Codigo>TOT-123</Codigo>
     <Nombre>Teatro</Nombre>
     <Profesor>Michael</Profesor>
-    <Creditos>4</Creditos>
+    <Creditos>0</Creditos>
+    <Nota>0</Nota>
+    <Calificacion>0</Calificacion>
+    <Letra />
+    <Estudiantes />
+  </Materia>
+  <Materia>
+    <ID>0</ID>
+    <Codigo>B101</Codigo>
+    <Nombre>Burundanga101</Nombre>
+    <Profesor>ciento quinze</Profesor>
+    <Creditos>5</Creditos>
     <Nota>0</Nota>
     <Calificacion>0</Calificacion>
     <Letra />

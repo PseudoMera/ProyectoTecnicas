@@ -67,5 +67,10 @@ namespace login
         {
             lastPoint = new Point(e.X, e.Y);
         }
+
+        private void AdminMenu_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }
