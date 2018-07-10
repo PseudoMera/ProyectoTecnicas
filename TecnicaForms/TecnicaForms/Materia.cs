@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace login
 {
-    class Materia
+    public class Materia
     {
         public int materiaId { get; set; }
         public string materiaNombre { get; set; }
