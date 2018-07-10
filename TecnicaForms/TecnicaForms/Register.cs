@@ -100,6 +100,7 @@ namespace login
             estu.carrera = tbCarrera.Text;
             estu.contrasena = tbContrasena.Text;
             estu.Materias = materiasAGuardar;
+            estu.cantidadMaterias = materiasAGuardar.Count;
             data.guardarEstudiantes(estu);
             MessageBox.Show("Felicidades! Te has registrado con exito");
             this.Close();
