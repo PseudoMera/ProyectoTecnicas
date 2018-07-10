@@ -12,6 +12,8 @@ namespace login
 {
     public partial class EditarDatos : Form
     {
+       public  Estudiante estudianteAEditar;
+        
         public EditarDatos()
         {
             InitializeComponent();
@@ -47,7 +49,11 @@ namespace login
 
         private void EditarDatos_Load(object sender, EventArgs e)
         {
-
+            tbNombre.Text = estudianteAEditar.nombre;
+            tbApellido.Text = estudianteAEditar.apellido;
+            tbCarrera.Text = estudianteAEditar.carrera;
+            tbUsuario.Text = estudianteAEditar.usuario;
+            tbClave.Text = estudianteAEditar.contrasena;
         }
 
         //Guardar button

@@ -28,7 +28,10 @@ namespace login
                     materiaCodigo = asignatura.Element("Codigo").Value,
                     materiaProfesor = asignatura.Element("Profesor").Value,
                     materiaCreditos = Convert.ToInt32(asignatura.Element("Creditos").Value),
-                    materiaId = Convert.ToInt32(asignatura.Element("ID").Value)
+                    materiaId = Convert.ToInt32(asignatura.Element("ID").Value),
+                    materiaNota = Convert.ToInt32(asignatura.Element("Nota").Value),
+                    calificacion = Convert.ToInt32(asignatura.Element("Calificacion").Value),
+                    letra = asignatura.Element("Letra").Value
                 });
 
             }
@@ -50,11 +53,12 @@ namespace login
             foreach (var student in estudiantesCargados)
             {
                 estudiantes.Add(new Estudiante() { usuario = student.Element("Usuario").Value,
-                                                    nombre = student.Element("Nombre").Value,
-                                                    apellido = student.Element("Apellido").Value,
-                                                    carrera = student.Element("Carrera").Value,
-                                                    contrasena = student.Element("Contrasena").Value,
-                                                    id = Convert.ToInt32(student.Element("ID").Value)
+                    nombre = student.Element("Nombre").Value,
+                    apellido = student.Element("Apellido").Value,
+                    carrera = student.Element("Carrera").Value,
+                    contrasena = student.Element("Contrasena").Value,
+                    cantidadMaterias = Convert.ToInt32(student.Element("CantidadMateria").Value),
+                    id = Convert.ToInt32(student.Element("ID").Value)
                 });
                 
             }
@@ -88,6 +92,7 @@ namespace login
                                   new XElement("Carrera", estudiante.carrera),
                                   new XElement("Contrasena", estudiante.contrasena),
                                   new XElement("ID", estudiante.id),
+                                  new XElement("CantidadMateria", estudiante.cantidadMaterias),
                                   new XElement("Materias",
                                       from materia in estudiante.Materias
                                       select new XElement("Materia",
@@ -118,6 +123,7 @@ namespace login
                     materiaNombre = asignatura.Element("Nombre").Value,
                     materiaCodigo = asignatura.Element("Codigo").Value,
                     materiaProfesor = asignatura.Element("Profesor").Value,
+                    materiaCreditos = Convert.ToInt32(asignatura.Element("Creditos").Value),
                     materiaId = Convert.ToInt32(asignatura.Element("ID").Value)
                 });
 

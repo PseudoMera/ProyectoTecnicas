@@ -36,7 +36,7 @@ namespace login
         string UserName;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            UserName = textBox1.Text;
+            UserName = tbUsuario.Text;
         }
 
         //Password textbox && we are saving the password entered by the user to confirm if the one making the log in
@@ -44,8 +44,8 @@ namespace login
         string password;
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox2.PasswordChar = '*';
-            password = textBox2.Text;
+            tbClave.PasswordChar = '*';
+            password = tbClave.Text;
         }
 
         //Sign Up button
@@ -73,13 +73,14 @@ namespace login
             } else
             {
                 Perfil perfil = new Perfil();
+                perfil.usuarioActual = tbUsuario.Text;
                 this.Hide();
                 perfil.Show();
             }
             //THIS WILL CLEAN THE PASSWORD AND USERNAME TEXTBOX IF IT IS INCORRECT
             //THIS SHOULD BE KEPT ON THE BOTTOM OF THE METHOD
-            textBox1.ResetText();
-            textBox2.ResetText();
+            tbUsuario.ResetText();
+            tbClave.ResetText();
         }
 
         //Exit button (closes the entire app)

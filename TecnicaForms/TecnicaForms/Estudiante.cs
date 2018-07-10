@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace login
 {
-    class Estudiante
+    public class Estudiante
     {
         public string usuario { get; set; }
         public string nombre { get; set; }
@@ -17,5 +17,6 @@ namespace login
         public string gradoHonor { get; set; }
         public int id { get; set; }
         public List<Materia> Materias { get; set; } = new List<Materia>();
+        public int cantidadMaterias { get; set; }
     }
 }
