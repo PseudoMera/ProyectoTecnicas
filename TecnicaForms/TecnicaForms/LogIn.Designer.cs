@@ -155,11 +155,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Roboto Cn", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(74, 460);
+            this.label2.Location = new System.Drawing.Point(12, 456);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(293, 24);
+            this.label2.Size = new System.Drawing.Size(375, 24);
             this.label2.TabIndex = 9;
-            this.label2.Text = "No tienes una cuenta? REGISTRATE!";
+            this.label2.Text = "Eres estudiante y no tienes cuenta? Registrate!";
             // 
             // panel1
             // 

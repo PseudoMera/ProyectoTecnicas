@@ -43,6 +43,7 @@
             this.dgvCreditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProfesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCEstudiantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -125,10 +126,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Location = new System.Drawing.Point(-4, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1068, 34);
+            this.panel1.Size = new System.Drawing.Size(1068, 42);
             this.panel1.TabIndex = 7;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -194,6 +196,18 @@
             this.dgvCEstudiantes.Name = "dgvCEstudiantes";
             this.dgvCEstudiantes.Width = 174;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.CausesValidation = false;
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(313, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(173, 29);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Lista de materias";
+            // 
             // AdminMenuSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -221,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,5 +257,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCreditos;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProfesor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCEstudiantes;
+        private System.Windows.Forms.Label label1;
     }
 }
