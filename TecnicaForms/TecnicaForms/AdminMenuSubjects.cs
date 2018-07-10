@@ -31,15 +31,7 @@ namespace login
         //Editar button
         private void button2_Click(object sender, EventArgs e)
         {
-            //Implement here the actual edit
-            //Before the dialogbox pops out
-
-            DialogResult dialog = MessageBox.Show("Esta seguro que desea realizar esta accion?", "Editar", MessageBoxButtons.YesNo);
-
-            if(dialog == DialogResult.Yes)
-            {
-
-            }
+           
         }
         //Salir button
         private void button3_Click(object sender, EventArgs e)

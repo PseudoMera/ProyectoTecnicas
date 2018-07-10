@@ -14,6 +14,7 @@ namespace login
     public partial class AdminStudentsMenu : Form
     {
         int index = 0;
+        List<Estudiante> estudiantesDisponibles = new List<Estudiante>();
         public AdminStudentsMenu()
         {
             InitializeComponent();
@@ -65,38 +66,34 @@ namespace login
 
         private void AdminStudentsMenu_Load(object sender, EventArgs e)
         {
-            string ruta = System.IO.Directory.GetCurrentDirectory();
-            XElement xelement = XElement.Load(ruta + "\\estudiantes.xml");
-            IEnumerable<XElement> elementos = xelement.Elements();
-            int inicio = 0;
-            bool primero = true;
-            // Read the entire XML
-            foreach (var objeto in elementos)
+            Datos data = new Datos();
+            data.cargarEstudiantes();
+            estudiantesDisponibles = data.obtenerEstudiantes();
+            int counter = 0;
+            foreach (Estudiante mat in estudiantesDisponibles)
             {
-                
                 DataGridViewRow nuevaFila = new DataGridViewRow();
                 DataGridViewCell nuevaCelda = new DataGridViewTextBoxCell();
-                nuevaCelda.Value = objeto.Element("ID").Value.ToString();
+                nuevaCelda.Value = mat.id;
                 nuevaFila.Cells.Add(nuevaCelda);
                 nuevaCelda = new DataGridViewTextBoxCell();
-                nuevaCelda.Value = objeto.Element("Nombre").Value;
+                nuevaCelda.Value = mat.nombre;
                 nuevaFila.Cells.Add(nuevaCelda);
                 nuevaCelda = new DataGridViewTextBoxCell();
-                nuevaCelda.Value = objeto.Element("Apellido").Value;
+                nuevaCelda.Value = mat.apellido;
                 nuevaFila.Cells.Add(nuevaCelda);
                 nuevaCelda = new DataGridViewTextBoxCell();
-                nuevaCelda.Value = objeto.Element("Carrera").Value;
+                nuevaCelda.Value = mat.carrera;
                 nuevaFila.Cells.Add(nuevaCelda);
                 nuevaCelda = new DataGridViewTextBoxCell();
-                nuevaCelda.Value = objeto.Element("CantidadMateria").Value;
+                nuevaCelda.Value = mat.cantidadMaterias;
                 nuevaFila.Cells.Add(nuevaCelda);
                 nuevaCelda = new DataGridViewTextBoxCell();
-                nuevaCelda.Value = objeto.Element("Usuario").Value;
+                nuevaCelda.Value = mat.usuario;
                 nuevaFila.Cells.Add(nuevaCelda);
                 dgvEstudiante.Rows.Add(nuevaFila);
-
             }
-         }
+        }
 
         //Minimize button
         private void button4_Click(object sender, EventArgs e)

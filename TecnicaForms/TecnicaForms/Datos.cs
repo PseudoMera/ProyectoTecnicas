@@ -5,6 +5,8 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using MoreLinq;
 
 namespace login
 {
@@ -14,29 +16,97 @@ namespace login
         private List<Estudiante> estudiantes = new List<Estudiante>();
         public string ruta = System.IO.Directory.GetCurrentDirectory();
 
-        public List<Materia> obtenerMaterias()
+       public void cargarMaterias()
         {
+            int inicio = 0;
             string dir = ruta + "\\materias.xml";
             XElement xelement = XElement.Load(dir);
             IEnumerable<XElement> materiasCargadas = xelement.Elements();
             // Read the entire XML
             foreach (var asignatura in materiasCargadas)
             {
-                materias.Add(new Materia()
+                Materia mate = new Materia();
+
+                mate.materiaNombre = asignatura.Element("Nombre").Value;
+                mate.materiaCodigo = asignatura.Element("Codigo").Value;
+                mate.materiaProfesor = asignatura.Element("Profesor").Value;
+                mate.materiaCreditos = Convert.ToInt32(asignatura.Element("Creditos").Value);
+                mate.materiaId = Convert.ToInt32(asignatura.Element("ID").Value);
+                mate.materiaNota = Convert.ToInt32(asignatura.Element("Nota").Value);
+                mate.calificacion = Convert.ToInt32(asignatura.Element("Calificacion").Value);
+                mate.cantidadEstudiante = Convert.ToInt32(asignatura.Element("CantidadEstudiante").Value);
+                mate.letra = asignatura.Element("Letra").Value;
+
+                 for (int i = 0; i < inicio + mate.cantidadEstudiante; i++)
                 {
-                    materiaNombre = asignatura.Element("Nombre").Value,
-                    materiaCodigo = asignatura.Element("Codigo").Value,
-                    materiaProfesor = asignatura.Element("Profesor").Value,
-                    materiaCreditos = Convert.ToInt32(asignatura.Element("Creditos").Value),
-                    materiaId = Convert.ToInt32(asignatura.Element("ID").Value),
-                    materiaNota = Convert.ToInt32(asignatura.Element("Nota").Value),
-                    calificacion = Convert.ToInt32(asignatura.Element("Calificacion").Value),
-                    letra = asignatura.Element("Letra").Value
-                });
+                    mate.estudiantes.Add(new Estudiante()
+                    {
+                        // listBox1.Items.Add(xelement.Descendants("Materia").ElementAt(i).Element("Nombre").Value);
+                        id = Convert.ToInt32(xelement.Descendants("Estudiante").ElementAt(i).Element("ID").Value),
+                        nombre = xelement.Descendants("Estudiante").ElementAt(i).Element("Nombre").Value,
+                        apellido = xelement.Descendants("Estudiante").ElementAt(i).Element("Apellido").Value,
+                        carrera = xelement.Descendants("Estudiante").ElementAt(i).Element("Carrera").Value
+                    });
+                }
+
+                materias.Add(mate);
+                inicio += mate.cantidadEstudiante;
 
             }
+            int cantidad = 0;
+            //     var distinctItems =  materias.Select(x => x.materiaCodigo).Distinct();
+            cantidad = materias.Count;
+            DialogResult dialog = MessageBox.Show(cantidad.ToString(), "Salir", MessageBoxButtons.YesNo);
+          //  var distinctItems = materias.DistinctBy(x => x.materiaCodigo).ToList();
+           // materias.Clear();
+           // cantidad = 0;
+          //  foreach(var item in distinctItems)
+         //   {
+          //      materias.Add(item);
+         //       cantidad++;
+         //   }
+        //  dialog = MessageBox.Show(cantidad.ToString(), "Salir", MessageBoxButtons.YesNo);
+        }
 
-            return this.materias;
+
+       public void cargarEstudiantes()
+         {
+            string ruta = System.IO.Directory.GetCurrentDirectory();
+            XElement xelement = XElement.Load(ruta + "\\estudiantes.xml");
+            IEnumerable<XElement> elementos = xelement.Elements();
+            int inicio = 0;
+            bool primero = true;
+            // Read the entire XML
+            foreach (var objeto in elementos)
+            {
+                Estudiante estu = new Estudiante();
+                estu.nombre = objeto.Element("Nombre").Value;
+                estu.apellido = objeto.Element("Apellido").Value;
+                estu.carrera = objeto.Element("Carrera").Value;
+                estu.usuario = objeto.Element("Usuario").Value;
+                estu.id = Convert.ToInt32(objeto.Element("ID").Value);
+                estu.cantidadMaterias = Convert.ToInt32(objeto.Element("CantidadMateria").Value);
+                if (estu.cantidadMaterias > 0)
+                {
+                    for (int i = 0; i < inicio + estu.cantidadMaterias; i++)
+                    {
+                        materias.Add(new Materia()
+                        {
+                            // listBox1.Items.Add(xelement.Descendants("Materia").ElementAt(i).Element("Nombre").Value);
+                            materiaCodigo = xelement.Descendants("Materia").ElementAt(i).Element("Codigo").Value,
+                            materiaNombre = xelement.Descendants("Materia").ElementAt(i).Element("Nombre").Value,
+                            materiaProfesor = xelement.Descendants("Materia").ElementAt(i).Element("Profesor").Value,
+                            materiaCreditos = Convert.ToInt32(xelement.Descendants("Materia").ElementAt(i).Element("Creditos").Value),
+                            materiaNota = Convert.ToInt32(xelement.Descendants("Materia").ElementAt(i).Element("Nota").Value),
+                            calificacion = Convert.ToInt32(xelement.Descendants("Materia").ElementAt(i).Element("Calificacion").Value),
+                            letra = xelement.Descendants("Materia").ElementAt(i).Element("Letra").Value
+                        });
+                    }
+                    inicio += estu.cantidadMaterias;
+                }
+                estudiantes.Add(estu);
+                primero = false;
+            }
         }
 
         public List<Estudiante> obtenerEstudiantes()
@@ -44,45 +114,25 @@ namespace login
             return this.estudiantes;
         }
 
-        public void guardarEstudiantes(Estudiante estudianteAGuardar)
+        public List<Materia> obtenerMaterias()
+        {
+            return this.materias;
+        }
+
+        public void agregarEstudiante(Estudiante estudianteAGuardar)
+        {
+            this.estudiantes.Add(estudianteAGuardar);
+        }
+
+        public void agregarMateria(Materia materiaAGuardar)
+        {
+            this.materias.Add(materiaAGuardar);
+        }
+        
+        public void guardarEstudiantes()
         {
             string dir = ruta + "\\estudiantes.xml";
-            XElement xelement = XElement.Load(dir);
-            IEnumerable<XElement> estudiantesCargados = xelement.Elements();
-            // Read the entire XML
-            foreach (var student in estudiantesCargados)
-            {
-                estudiantes.Add(new Estudiante() { usuario = student.Element("Usuario").Value,
-                    nombre = student.Element("Nombre").Value,
-                    apellido = student.Element("Apellido").Value,
-                    carrera = student.Element("Carrera").Value,
-                    contrasena = student.Element("Contrasena").Value,
-                    cantidadMaterias = Convert.ToInt32(student.Element("CantidadMateria").Value),
-                    id = Convert.ToInt32(student.Element("ID").Value)
-                });
-                
-            }
-            //This throws an exception when we do the sign up without selecting a subject
-            //Implement the try catch for this 
-            foreach(Materia mate in estudianteAGuardar.Materias)
-            {
-
-                Estudiante estu = new Estudiante();
-                estu.usuario = estudianteAGuardar.usuario;
-                estu.nombre = estudianteAGuardar.nombre;
-                estu.apellido = estudianteAGuardar.apellido;
-                estu.carrera = estudianteAGuardar.carrera;
-                estu.contrasena = estudianteAGuardar.contrasena;
-                foreach(Materia mater in materias)
-                {
-                    if(mater == mate)
-                    {
-                        mater.estudiantes.Add(estu);
-                    }
-                }
-            }
-            guardarMateriasActuales();
-            this.estudiantes.Add(estudianteAGuardar);
+            cargarEstudiantes();
             var xEle = new XElement("Estudiantes",
                              from estudiante in estudiantes
                              select new XElement("Estudiante",
@@ -106,10 +156,11 @@ namespace login
                                           new XElement("Letra", materia.letra)
                                         ))
                          ));
-            xEle.Save(ruta + "\\estudiantes.xml");
+
+            xEle.Save(dir);
 
         }
-
+        /*
         public void guardarMaterias(Materia materiaAGuardar)
         {
             string dir = ruta + "\\materias.xml";
@@ -156,7 +207,7 @@ namespace login
             xEle.Save(ruta + "\\materias.xml");
         }
 
-        public void guardarMateriasActuales()
+       public void guardarMateriasActuales()
         {
             string dir = ruta + "\\materias.xml";
             XElement xelement = XElement.Load(dir);
@@ -203,7 +254,7 @@ namespace login
                          ));
             xEle.Save(ruta + "\\materias.xml");
         }
-
+        */
 
     }
 }

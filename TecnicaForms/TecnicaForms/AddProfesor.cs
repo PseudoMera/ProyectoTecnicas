@@ -34,6 +34,7 @@ namespace login
 
             if(dialog == DialogResult.Yes)
             {
+                //Implemente here the actual save
                 this.Close();
             }
         }

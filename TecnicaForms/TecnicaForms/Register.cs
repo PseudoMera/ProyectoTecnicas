@@ -87,7 +87,6 @@ namespace login
             SubjectsList subjectlist = new SubjectsList();
             subjectlist.Show();
             materiasAGuardar = new List<Materia>();
-            materiasAGuardar = login.SubjectsList.MateriasSeleccionadas;
         }
 
         //Register button
@@ -101,7 +100,9 @@ namespace login
             estu.contrasena = tbContrasena.Text;
             estu.Materias = materiasAGuardar;
             estu.cantidadMaterias = materiasAGuardar.Count;
-            data.guardarEstudiantes(estu);
+           // data.cargarEstudiantes();
+            data.agregarEstudiante(estu);
+            data.guardarEstudiantes();
             MessageBox.Show("Felicidades! Te has registrado con exito");
             this.Close();
             LogIn log = new LogIn();

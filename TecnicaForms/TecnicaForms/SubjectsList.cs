@@ -25,9 +25,9 @@ namespace login
         private void SubjectsList_Load(object sender, EventArgs e)
         {
             Datos data = new Datos();
+            data.cargarMaterias();
             materiasDisponibles = data.obtenerMaterias();
             int counter = 0;
-            string val = materiasDisponibles.Count.ToString();
             foreach (Materia mat in materiasDisponibles)
             {
                 DataGridViewRow nuevaFila = new DataGridViewRow();
