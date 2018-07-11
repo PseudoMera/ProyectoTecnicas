@@ -1,0 +1,148 @@
+[
+  {
+    "materiaId": 123,
+    "materiaNombre": "Matematicas",
+    "materiaCodigo": "MAT-203",
+    "materiaProfesor": "Sergio Lopez",
+    "materiaCreditos": 4,
+    "materiaNota": 90,
+    "letra": "A",
+    "cantidadEstudiante": 2,
+    "estudiantes": [
+      {
+        "usuario": "bant",
+        "nombre": "Pedro",
+        "apellido": "Jimenez",
+        "carrera": "Software",
+        "contrasena": "1234",
+        "indiceTrimestral": 3.9,
+        "gradoHonor": "Summa Cum Laude",
+        "id": 12345,
+        "Materias": [],
+        "cantidadMaterias": 0
+      },
+      {
+        "usuario": "xarozo",
+        "nombre": "Juancho",
+        "apellido": "Rodriguez",
+        "carrera": "Sistemas",
+        "contrasena": "1234",
+        "indiceTrimestral": 3.4,
+        "gradoHonor": "Magna Cum Laude",
+        "id": 12346,
+        "Materias": [],
+        "cantidadMaterias": 0
+      }
+    ],
+    "calificacion": 16.5
+  },
+  {
+    "materiaId": 124,
+    "materiaNombre": "Sociales",
+    "materiaCodigo": "SOC-203",
+    "materiaProfesor": "Sergio Lopez",
+    "materiaCreditos": 4,
+    "materiaNota": 92,
+    "letra": "A",
+    "cantidadEstudiante": 2,
+    "estudiantes": [
+      {
+        "usuario": "bant",
+        "nombre": "Pedro",
+        "apellido": "Jimenez",
+        "carrera": "Software",
+        "contrasena": "1234",
+        "indiceTrimestral": 3.9,
+        "gradoHonor": "Summa Cum Laude",
+        "id": 12345,
+        "Materias": [],
+        "cantidadMaterias": 0
+      },
+      {
+        "usuario": "xarozo",
+        "nombre": "Juancho",
+        "apellido": "Rodriguez",
+        "carrera": "Sistemas",
+        "contrasena": "1234",
+        "indiceTrimestral": 3.4,
+        "gradoHonor": "Magna Cum Laude",
+        "id": 12346,
+        "Materias": [],
+        "cantidadMaterias": 0
+      }
+    ],
+    "calificacion": 16.5
+  },
+  {
+    "materiaId": 0,
+    "materiaNombre": "Naturales",
+    "materiaCodigo": "NATU-230",
+    "materiaProfesor": "Felona Martines",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 0,
+    "estudiantes": [],
+    "calificacion": 0.0
+  },
+  {
+    "materiaId": 0,
+    "materiaNombre": "Teatro",
+    "materiaCodigo": "TOT-203",
+    "materiaProfesor": "Godines",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 0,
+    "estudiantes": [],
+    "calificacion": 0.0
+  },
+  {
+    "materiaId": 0,
+    "materiaNombre": "Sociales",
+    "materiaCodigo": "SOC-203",
+    "materiaProfesor": "Sergio Perez",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 0,
+    "estudiantes": [],
+    "calificacion": 0.0
+  },
+  {
+    "materiaId": 0,
+    "materiaNombre": "Matematicas",
+    "materiaCodigo": "MAT-203",
+    "materiaProfesor": "Pedro Cimarra",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 0,
+    "estudiantes": [],
+    "calificacion": 0.0
+  },
+  {
+    "materiaId": 0,
+    "materiaNombre": "Naturales",
+    "materiaCodigo": "NATU-230",
+    "materiaProfesor": "Marcos",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 0,
+    "estudiantes": [],
+    "calificacion": 0.0
+  },
+  {
+    "materiaId": 0,
+    "materiaNombre": "Teatro",
+    "materiaCodigo": "TOT-203",
+    "materiaProfesor": "Sarah",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 0,
+    "estudiantes": [],
+    "calificacion": 0.0
+  }
+]
