@@ -32,9 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MoreLinq, Version=3.0.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>packages\morelinq.3.0.0\lib\net451\MoreLinq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProfesor.Designer.cs">
+      <DependentUpon>AddProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     <Compile Include=".Designer.cs">
       <DependentUpon>AdminSubjectsList.cs</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTeacherList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTeacherList.Designer.cs">
+      <DependentUpon>AdminTeacherList.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarAsignatura.cs">
       <SubType>Form</SubType>
@@ -112,6 +130,9 @@
     <Compile Include="SubjectsList.Designer.cs">
       <DependentUpon>SubjectsList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddProfesor.resx">
+      <DependentUpon>AddProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminSubjectsList.resx">
       <DependentUpon>AdminSubjectsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTeacherList.resx">
+      <DependentUpon>AdminTeacherList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarAsignatura.resx">
       <DependentUpon>AgregarAsignatura.cs</DependentUpon>
@@ -151,6 +175,7 @@
     <EmbeddedResource Include="SubjectsList.resx">
       <DependentUpon>SubjectsList.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

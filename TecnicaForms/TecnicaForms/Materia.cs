@@ -15,7 +15,8 @@ namespace login
         public int materiaCreditos { get; set; }
         public int materiaNota { get; set; }
         public string letra { get; set; }
-        public List<Estudiante> estudiantes { get; set; } = new List<Estudiante>();
+        public int cantidadEstudiante { get; set; }
+        public List<Estudiante> estudiantes { get; set; } 
         public bool materiaSeleccionada { get; set; }
         public double calificacion { get; set; }
 

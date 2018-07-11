@@ -72,5 +72,13 @@ namespace login
         {
             ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
+
+        //Professors list button
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AdminTeacherList adminTeacherList = new AdminTeacherList();
+            this.Close();
+            adminTeacherList.Show();
+        }
     }
 }

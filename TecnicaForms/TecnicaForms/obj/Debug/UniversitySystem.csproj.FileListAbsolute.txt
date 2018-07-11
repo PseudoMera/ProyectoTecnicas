@@ -18,7 +18,6 @@ C:\Users\albin\source\repos\login\login\obj\Debug\login.AgregarAsignatura.resour
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\login.exe.config
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\login.exe
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\login.pdb
-C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csprojAssemblyReference.cache
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.AdminMenu.resources
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.AdminMenuSubjects.resources
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.AdminStudentsMenu.resources
@@ -71,3 +70,17 @@ C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\Proyect
 C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csproj.CoreCompileInputs.cache
 C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\obj\Debug\login.exe
 C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\obj\Debug\login.pdb
+C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csprojAssemblyReference.cache
+C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\bin\Debug\MoreLinq.dll
+C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\bin\Debug\System.ValueTuple.dll
+C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\bin\Debug\MoreLinq.xml
+C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\bin\Debug\System.ValueTuple.xml
+C:\Users\Francisco\Desktop\Clases\Tecnicas\FinalProject\ProyectoTecnicas\ProyectoTecnicas-master (1)\ProyectoTecnicas-master\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csproj.CopyComplete
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\MoreLinq.dll
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\System.ValueTuple.dll
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\MoreLinq.xml
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\System.ValueTuple.xml
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csproj.CopyComplete
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.AddProfesor.resources
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csprojAssemblyReference.cache
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.AdminTeacherList.resources

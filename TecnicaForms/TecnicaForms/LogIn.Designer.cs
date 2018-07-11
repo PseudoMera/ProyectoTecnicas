@@ -89,10 +89,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(47, 208);
+            this.pictureBox2.Location = new System.Drawing.Point(63, 223);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.Size = new System.Drawing.Size(48, 49);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -100,10 +100,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(47, 296);
+            this.pictureBox3.Location = new System.Drawing.Point(63, 298);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
@@ -153,13 +153,13 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Cn", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(24, 455);
+            this.label2.Location = new System.Drawing.Point(94, 448);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(377, 25);
+            this.label2.Size = new System.Drawing.Size(271, 40);
             this.label2.TabIndex = 9;
-            this.label2.Text = "No tienes una cuenta? REGISTRATE!";
+            this.label2.Text = "Eres estudiante y no tienes una cuenta?\r\n                         Registrate!";
             // 
             // panel1
             // 

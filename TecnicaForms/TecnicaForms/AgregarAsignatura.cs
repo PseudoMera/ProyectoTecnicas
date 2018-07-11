@@ -50,7 +50,7 @@ namespace login
             mat.materiaProfesor = tbProfesor.Text;
             mat.materiaNombre = tbNombre.Text;
 
-            data.guardarMaterias(mat);
+           // data.guardarMaterias(mat);
             DialogResult dialog = MessageBox.Show("Quieres guardar esta informacion?", "save", MessageBoxButtons.YesNo);
 
             if(dialog == DialogResult.Yes)
