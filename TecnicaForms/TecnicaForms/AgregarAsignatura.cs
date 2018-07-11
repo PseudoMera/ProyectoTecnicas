@@ -42,6 +42,12 @@ namespace login
 
         //Save button
         string nombre, codigo, profesor, creditos;
+
+        private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             mat = new Materia();
@@ -61,6 +67,8 @@ namespace login
                 codigo = tbCodigo.Text;
                 profesor = tbProfesor.Text;
                 creditos = tbCreditos.Text;
+
+
             }
 
             this.Close();

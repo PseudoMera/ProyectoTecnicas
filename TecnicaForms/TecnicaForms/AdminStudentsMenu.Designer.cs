@@ -45,6 +45,7 @@
             this.dgvCarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCantidadMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvIndice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
             this.SuspendLayout();
@@ -148,7 +149,8 @@
             this.dgvApellido,
             this.dgvCarrera,
             this.dgvCantidadMateria,
-            this.dgvUsuario});
+            this.dgvUsuario,
+            this.dgvIndice});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +207,11 @@
             this.dgvUsuario.HeaderText = "Usuario";
             this.dgvUsuario.Name = "dgvUsuario";
             // 
+            // dgvIndice
+            // 
+            this.dgvIndice.HeaderText = "Indice General";
+            this.dgvIndice.Name = "dgvIndice";
+            // 
             // AdminStudentsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,5 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCarrera;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCantidadMateria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvIndice;
     }
 }

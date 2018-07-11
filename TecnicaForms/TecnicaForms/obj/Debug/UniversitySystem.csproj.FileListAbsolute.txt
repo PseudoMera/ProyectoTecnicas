@@ -84,3 +84,5 @@ C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.AddProfesor.resources
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csprojAssemblyReference.cache
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\obj\Debug\login.AdminTeacherList.resources
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\bin\Debug\Newtonsoft.Json.xml

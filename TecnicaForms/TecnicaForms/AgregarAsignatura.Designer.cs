@@ -117,6 +117,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(208, 22);
             this.tbNombre.TabIndex = 6;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbCodigo
             // 

@@ -113,7 +113,7 @@ namespace login
 
         private void dgvMaterias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void AdminMenuSubjects_Paint(object sender, PaintEventArgs e)
