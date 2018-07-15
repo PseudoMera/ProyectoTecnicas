@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Estudiante>
+  <Usuario>pedrox</Usuario>
+  <Nombre>Pedro</Nombre>
+  <Apellido>Pedro</Apellido>
+  <Carrera>Pedro</Carrera>
+  <Contrasena />
+  <ID>0</ID>
+  <CantidadMateria>3</CantidadMateria>
+</Estudiante>

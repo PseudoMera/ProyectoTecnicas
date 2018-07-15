@@ -1,0 +1,18 @@
+[
+  {
+    "usuario": "emil.elias",
+    "clave": "1232",
+    "id": "2018713IMHGGP",
+    "nombre": "Emil Elias",
+    "materias": null,
+    "cantidadMaterias": 5
+  },
+  {
+    "usuario": "francia.mejia",
+    "clave": "1234",
+    "id": "20187139ZT8RP",
+    "nombre": "Michelle Mejia",
+    "materias": null,
+    "cantidadMaterias": 0
+  }
+]

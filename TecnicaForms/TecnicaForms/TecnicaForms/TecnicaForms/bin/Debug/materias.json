@@ -1,0 +1,349 @@
+[
+  {
+    "materiaId": "2018713Q3KIQM",
+    "materiaNombre": "Tecnicas Fundamentales",
+    "materiaCodigo": "TFM-222",
+    "materiaProfesor": "Michelle Mejia",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 4,
+    "estudiantes": [
+      {
+        "id": "20187132VE3IE",
+        "usuario": "Xaroz",
+        "nombre": "Jason",
+        "apellido": "Guo",
+        "carrera": "Software",
+        "contrasena": "1234",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      },
+      {
+        "id": "2018713XZQB9E",
+        "usuario": "evalir",
+        "nombre": "Enrique",
+        "apellido": "Ortiz",
+        "carrera": "Software",
+        "contrasena": "123",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      },
+      {
+        "id": "2018713H1Y0UE",
+        "usuario": "bant",
+        "nombre": "Cesar",
+        "apellido": "Gonzalez",
+        "carrera": "Software",
+        "contrasena": "1234",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      },
+      {
+        "id": "201871488UWPE",
+        "usuario": "Fairy",
+        "nombre": "Hiro",
+        "apellido": "Mashima",
+        "carrera": "Cine",
+        "contrasena": "mangaka",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      }
+    ],
+    "calificacion": 0
+  },
+  {
+    "materiaId": "2018713R1VCH",
+    "materiaNombre": "Calculo Integrable",
+    "materiaCodigo": "CBM-203",
+    "materiaProfesor": "Emil Elias",
+    "materiaCreditos": 4,
+    "materiaNota": 0,
+    "letra": null,
+    "cantidadEstudiante": 5,
+    "estudiantes": [
+      {
+        "id": "20187132VE3IE",
+        "usuario": "Xaroz",
+        "nombre": "Jason",
+        "apellido": "Guo",
+        "carrera": "Software",
+        "contrasena": "1234",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      },
+      {
+        "id": "2018713XZQB9E",
+        "usuario": "evalir",
+        "nombre": "Enrique",
+        "apellido": "Ortiz",
+        "carrera": "Software",
+        "contrasena": "123",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      },
+      {
+        "id": "2018713HVRTB",
+        "usuario": "pseudomera",
+        "nombre": "Albin",
+        "apellido": "Frisk",
+        "carrera": "Software",
+        "contrasena": "1221",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": "Z",
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 1
+      },
+      {
+        "id": "2018713H1Y0UE",
+        "usuario": "bant",
+        "nombre": "Cesar",
+        "apellido": "Gonzalez",
+        "carrera": "Software",
+        "contrasena": "1234",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      },
+      {
+        "id": "201871488UWPE",
+        "usuario": "Fairy",
+        "nombre": "Hiro",
+        "apellido": "Mashima",
+        "carrera": "Cine",
+        "contrasena": "mangaka",
+        "indiceTrimestral": 0.0,
+        "gradoHonor": null,
+        "Materias": [
+          {
+            "materiaId": "2018713R1VCH",
+            "materiaNombre": "Calculo Integrable",
+            "materiaCodigo": "CBM-203",
+            "materiaProfesor": "Emil Elias",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          },
+          {
+            "materiaId": "2018713Q3KIQM",
+            "materiaNombre": "Tecnicas Fundamentales",
+            "materiaCodigo": "TFM-222",
+            "materiaProfesor": "Michelle Mejia",
+            "materiaCreditos": 4,
+            "materiaNota": 0,
+            "letra": null,
+            "cantidadEstudiante": 0,
+            "estudiantes": null,
+            "calificacion": 0
+          }
+        ],
+        "cantidadMaterias": 2
+      }
+    ],
+    "calificacion": 0
+  }
+]
