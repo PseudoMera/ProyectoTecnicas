@@ -145,7 +145,6 @@ C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaFo
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaForms\TecnicaForms\bin\Debug\MoreLinq.xml
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaForms\TecnicaForms\bin\Debug\Newtonsoft.Json.xml
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaForms\TecnicaForms\bin\Debug\System.ValueTuple.xml
-C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaForms\TecnicaForms\obj\Debug\UniversitySystem.csprojAssemblyReference.cache
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaForms\TecnicaForms\obj\Debug\login.AddProfesor.resources
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaForms\TecnicaForms\obj\Debug\login.AdminMenu.resources
 C:\Users\albin\source\repos\ProyectoTecnicas\TecnicaForms\TecnicaForms\TecnicaForms\TecnicaForms\obj\Debug\login.AdminMenuSubjects.resources
