@@ -113,7 +113,30 @@ namespace login
         {
             materiasAGuardar = new List<Materia>();
             materiasAGuardar = SubjectsList.MateriasSeleccionadas;
-            if (materiasAGuardar.Count > 0)
+            if(string.IsNullOrWhiteSpace(tbUsername.Text))
+            {
+                this.errorProvider1.SetError(tbUsername, "El campo de usuario esta vacio, favor llenarlo.");
+            }else if (string.IsNullOrWhiteSpace(tbNombre.Text))
+            {
+                this.errorProvider1.SetError(tbNombre, "El campo de nombre esta vacio, favor llenarlo.");
+
+            }
+            else if (string.IsNullOrWhiteSpace(tbApellido.Text))
+            {
+                this.errorProvider1.SetError(tbApellido, "El campo de apellido esta vacio, favor llenarlo.");
+
+            }
+            else if (string.IsNullOrWhiteSpace(tbCarrera.Text))
+            {
+                this.errorProvider1.SetError(tbCarrera, "El campo de carrera esta vacio, favor llenarlo.");
+
+            }
+            else if (string.IsNullOrWhiteSpace(tbContrasena.Text))
+            {
+                this.errorProvider1.SetError(tbContrasena, "El campo de clave esta vacio, favor llenarlo.");
+
+            }
+            else if (materiasAGuardar.Count > 0)
             {
                 estu = new Estudiante();
                 estu.id = generadorID();
